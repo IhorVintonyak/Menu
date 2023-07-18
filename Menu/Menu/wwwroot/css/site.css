@@ -1,18 +1,13 @@
-html {
-  font-size: 14px;
+* {
+    margin:0px;
+    padding:0px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+body{
+    background:#0094ff;
 }
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
+div {
+    margin-top: 30px;
+    background: #00ffff;
+    width:800px;
 }
