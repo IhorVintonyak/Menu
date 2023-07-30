@@ -10,7 +10,7 @@ namespace Menu.Class
     {
         private string name;
         private string description;
-        private string[] ingredients;
+        private string ingredients;
         private int preparationTime;
 
         public Recipe()
@@ -20,7 +20,7 @@ namespace Menu.Class
             this.PreparationTime = 0;
         }
 
-        public Recipe(string name, string description, string[] ingredients, int preparationTime)
+        public Recipe(string name, string description, string ingredients, int preparationTime)
         {
             this.Name = name;
             this.Description = description;
@@ -30,7 +30,7 @@ namespace Menu.Class
 
         public string Name { get => name; set => name = value; }
         public string Description { get => description; set => description = value; }
-        public string[] Ingredients { get => ingredients; set => ingredients = value; }
+        public string Ingredients { get => ingredients; set => ingredients = value; }
         public int PreparationTime { get => preparationTime; set => preparationTime = value; }
 
 

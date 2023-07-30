@@ -5,26 +5,66 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Menu"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="700">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0" Background="#FF35E0F8">
-            <Grid.ColumnDefinitions>
-                
-            </Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions />
             <Grid.RowDefinitions >
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
-            <StackPanel Grid.Row = "1" Grid.Column="1" Orientation = "Vertical" Background="White" Margin="10" Name="spRecipe">
+            <StackPanel Grid.Row = "1" Grid.Column="0" Orientation = "Vertical" Background="White" Margin="10" Name="spRecipe">
                 <TextBlock Name="tbName"></TextBlock>
                 <TextBlock Name="tbDescription"></TextBlock>
                 <TextBlock Name="tbIngredients"></TextBlock>
                 <TextBlock Name="tbTime"></TextBlock>
             </StackPanel>
+        </Grid>
+        <Grid Grid.Column="1" Background="#FF35E0F8" Margin="20">
+            <Grid.ColumnDefinitions />
+            <Grid.RowDefinitions >
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            
+            <TextBlock Grid.Row = "0"  Name="tblFormTitle" Text="New Recipe" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            
+            <StackPanel Grid.Row = "1" Grid.Column="1" Orientation = "Horizontal" Background="#FF35E0F8" Margin="10" Name="spFormName" >
+                <TextBlock Name="tblFormName" Text="Name: "/>
+                <TextBox Name="tbFormName" Width="200" Margin="40,0,0,0" />
+            </StackPanel>
+            
+            <StackPanel Grid.Row="2" Orientation = "Horizontal" Name="spFormDescription" Margin="10">
+                <TextBlock Name="tblFormDescription" Text="Description: "/>
+                <TextBox Name="tbFormDescription" Width="200" Margin="10,0,0,0"/>
+            </StackPanel>
+            
+            <StackPanel Grid.Row="3" Orientation = "Horizontal" Name="spFormIngredients" Margin="10">
+                <TextBlock Name="tblFormIngredients" Text="Ingredients: "/>
+                <TextBox Name="tbFormIngredients" Width="200" Margin="10,0,0,0"/>
+            </StackPanel>
+            
+            <StackPanel Grid.Row="4" Orientation = "Horizontal" Name="spFormTime" Margin="10">
+                <TextBlock Name="tblFormTime" Text="Time: "/>
+                <TextBox Name="tbFormTime" Width="200" Margin="42,0,0,0"/>
+            </StackPanel>
+            
+            <!--Inactive-->
+            <StackPanel Grid.Row="5" Orientation = "Horizontal" Name="spFormPhoto" Margin="10">
+                <TextBlock Name="tblFormPhoto" Text="Photo: "/>
+                <Button Content="Upload Photo" Margin="35,0,0,0"  Width="200" BorderThickness="5"  BorderBrush="White" Background="#FF35E0F8"></Button>
+            </StackPanel>
+
+            <Button Grid.Row="6" Width="200" Height="50" Background="#FF35E0F8" BorderThickness="5" BorderBrush="White" Name="btnUpload" Click="btnUpload_Click">Upload</Button>
         </Grid>
     </Grid>
 </Window>
