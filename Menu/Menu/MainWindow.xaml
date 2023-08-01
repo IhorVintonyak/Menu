@@ -5,26 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Menu"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="700">
+        Title="MainWindow" Height="500" Width="1000">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0" Background="#FF35E0F8">
+        <Grid Grid.Column="0" Background="#FF35E0F8" Name="gridRecipesBlock">
             <Grid.ColumnDefinitions />
             <Grid.RowDefinitions >
                 <RowDefinition Height="40"/>
-                <RowDefinition Height="100"/>
+                <RowDefinition />
             </Grid.RowDefinitions>
-            <StackPanel Grid.Row = "1" Grid.Column="0" Orientation = "Vertical" Background="White" Margin="10" Name="spRecipe">
-                <TextBlock Name="tbName"></TextBlock>
-                <TextBlock Name="tbDescription"></TextBlock>
-                <TextBlock Name="tbIngredients"></TextBlock>
-                <TextBlock Name="tbTime"></TextBlock>
-            </StackPanel>
+
+            <ListView Grid.Row = "1" Grid.Column="0" Background="White" Height="400" Name="spRecipe">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name" Width="100" DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="Description" Width="170" DisplayMemberBinding="{Binding Description}" />
+                        <GridViewColumn Header="Ingredients" Width="170" DisplayMemberBinding="{Binding Ingredients}" />
+                        <GridViewColumn Header="Time" Width="30" DisplayMemberBinding="{Binding PreparationTime}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
         </Grid>
-        <Grid Grid.Column="1" Background="#FF35E0F8" Margin="20">
+        <Grid Grid.Column="1" Background="#FF35E0F8" Margin="20" Width="400">
             <Grid.ColumnDefinitions />
             <Grid.RowDefinitions >
                 <RowDefinition Height="1*"/>
