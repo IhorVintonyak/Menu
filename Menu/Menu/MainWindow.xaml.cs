@@ -61,12 +61,15 @@ namespace Menu
 
         public void ListViewGridViewSample()
         {
+
             InitializeComponent();
+  
             List<Recipe> items = new List<Recipe>();
-            items.Add(new Recipe() { Name = "John Doe", Description = "dasda", Ingredients = "carot", PreparationTime=15 });
-            items.Add(new Recipe() { Name = "Jane Doe", Description = "gfdgdfg", Ingredients = "apple", PreparationTime = 10 });
-            items.Add(new Recipe() { Name = "Sammy Doe", Description = "fsdfsd", Ingredients = "fish", PreparationTime = 8 });
+            items.Add(new Recipe() { Name = "Spaghetti all'Amatriciana", Description = "Famoso primo piatto nato ad Amatrice fosse il pasto principale dei pastori, ma originariamente era senza pomodoro e prendeva il nome di “gricia”.", Ingredients = "Spaghetti , Guanciale, Vino bianco, Pomodori pelati, Pecorino romano", PreparationTime= 10 });
+            items.Add(new Recipe() { Name = "Gnocchi alla sorrentina", Description = "gnocchi così amato è il mix di sapori mediterranei, genuini e semplici", Ingredients = "Patate rosse , Uova, Farina, Passata di pomodoro, Basilico ", PreparationTime = 30 });
+            items.Add(new Recipe() { Name = "Risotto al telefono", Description = ". Si ispira ad un piatto tipico della cucina laziale: i supplì al telefono.", Ingredients = "Riso vialone nano, Passata di pomodoro, Scalogno, Mozzarella ", PreparationTime = 8 });
             spRecipe.ItemsSource = items;
+ 
         }
     }
 }

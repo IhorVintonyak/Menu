@@ -32,7 +32,5 @@ namespace Menu.Class
         public string Description { get => description; set => description = value; }
         public string Ingredients { get => ingredients; set => ingredients = value; }
         public int PreparationTime { get => preparationTime; set => preparationTime = value; }
-
-
     }
 }

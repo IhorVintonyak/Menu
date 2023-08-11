@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Menu"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="1000">
+        Title="MainWindow" Height="500" Width="1300">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
+            <ColumnDefinition Width="800"/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0" Background="#FF35E0F8" Name="gridRecipesBlock">
@@ -18,16 +18,22 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
 
+            <!--
             <ListView Grid.Row = "1" Grid.Column="0" Background="White" Height="400" Name="spRecipe">
                 <ListView.View>
+
                     <GridView>
                         <GridViewColumn Header="Name" Width="100" DisplayMemberBinding="{Binding Name}" />
-                        <GridViewColumn Header="Description" Width="170" DisplayMemberBinding="{Binding Description}" />
-                        <GridViewColumn Header="Ingredients" Width="170" DisplayMemberBinding="{Binding Ingredients}" />
+                        <GridViewColumn Header="Description" Width="310" DisplayMemberBinding="{Binding Description}" />
+                        <GridViewColumn Header="Ingredients" Width="310" DisplayMemberBinding="{Binding Ingredients}" />
                         <GridViewColumn Header="Time" Width="30" DisplayMemberBinding="{Binding PreparationTime}" />
                     </GridView>
                 </ListView.View>
             </ListView>
+            -->
+            <DataGrid Grid.Row = "1" Grid.Column="0" Background="White" Height="400" Name="spRecipe" ItemsSource="{Binding}">
+                
+            </DataGrid>
 
         </Grid>
         <Grid Grid.Column="1" Background="#FF35E0F8" Margin="20" Width="400">
